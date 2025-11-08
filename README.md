@@ -68,22 +68,48 @@ CollaborativeMusicPlaylistManager/
 g++ -std=c++17 -Wall -Wextra -I./include src/*.cpp -o playlist_manager.exe
 ```
 
-## Running the Program
-
 ```bash
 .\playlist_manager.exe
 ```
 
+## 📚 Data Structures & Algorithms
 
-### Display Playlist
-```bash
-echo "4`n13" | .\playlist_manager.exe
-```
+### Data Structures Implemented
 
-### Run Collaborative Demo
-```bash
-echo "12`n13" | .\playlist_manager.exe
-```
+| Data Structure | Implementation | Usage |
+|----------------|---------------|-------|
+| **Singly Linked List** | Manual (Node-based) | Playlist song storage |
+| **Stack** | Custom template | Undo/redo history |
+| **Queue** | Custom template | Future use (task queue) |
+| **Thread Pool** | Worker threads + task queue | Concurrent operations |
+
+### Algorithms Implemented
+
+| Algorithm | Type | Complexity | Usage |
+|-----------|------|-----------|-------|
+| **Bubble Sort** | Sorting | O(n²) time, O(1) space | Sort by title/artist/rating/duration |
+| **Fisher-Yates Shuffle** | Randomization | O(n) time, O(1) space | Playlist shuffle |
+| **Linked List Traversal** | Linear Search | O(n) time | Find/edit/remove songs |
+| **Stack Push/Pop** | LIFO Operations | O(1) time | Undo/redo operations |
+| **Deep Copy** | Cloning | O(n) time, O(n) space | Playlist snapshots |
+
+## ⏱️ Time & Space Complexity
+
+| Operation | Time Complexity | Space Complexity | Description |
+|-----------|----------------|------------------|-------------|
+| Add Song | O(n) | O(1) | Traverse to tail, add node |
+| Remove Song | O(n) | O(1) | Search and delete node |
+| Edit Song | O(n) | O(1) | Search and modify in-place |
+| Find Song | O(n) | O(1) | Linear search by title |
+| Sort Playlist | O(n²) | O(1) | Bubble sort (in-place) |
+| Shuffle | O(n) | O(n) | Convert to array, shuffle, rebuild |
+| Undo | O(n) | O(n) | Pop stack, copy playlist |
+| Redo | O(n) | O(n) | Pop stack, copy playlist |
+| Save to File | O(n) | O(n) | Iterate and write to CSV |
+| Load from File | O(n) | O(n) | Read CSV, build linked list |
+| Display | O(n) | O(1) | Traverse and print |
+
+**Legend**: n = number of songs in playlist
 
 ## Notes
 
